@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: rgb(255, 251, 232);
+            margin: 0 0 0 0;
+        }
+
+        header {
+            background-color: rgb(255, 251, 232);
+            position: relative;
+            border-bottom: double gray;
+            height: 80px;
+            padding: 10px 0 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #companyTextContainer {
+            position: absolute;
+            margin-left: 215px;
+            top: 0;
+            transform: translateX(-50%);
+            width: auto;
+        }
+
+        #companyText {
+            margin-top: 20px;
+            height: 60px;
+        }
+
+        .navLinks {
+            margin-right: 10px;
+        }
+
+        #companyLogo {
+            margin-left: -10px;
+            height: 120px;
+            width: auto;
+        }
+
+        .navLinks {
+            margin: auto;
+            text-align: center;
+        }
+
+        #homeAndabout {
+            font-family: Tahoma;
+        }
+
+        #homeLink,
+        #aboutLink {
+            margin-right: 40px;
+            font-size: 25px;
+        }
+
+        #homeLink {
+            height: 20px;
+            font-family: "Lato", sans-serif;
+            width: auto;
+            text-decoration: none;
+            color: rgb(33, 98, 183);
+        }
+
+        #aboutLink {
+            font-family: "Lato", sans-serif;
+            color: black;
+            text-decoration: none;
+            width: auto;
+            height: 20px;
+        }
+
+        main {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        main img {
+            opacity: 0.4;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        main h1 {
+            font-family: "Lato", sans-serif;
+            margin-top: 50px;
+            font-size: 50px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        main h2 {
+            font-family: "Lato", sans-serif;
+        }
+
+        main h3 {
+            color: pink;
+            margin-top: -20px;
+        }
+
+        @keyframes wiggle {
+            0%, 100% {
+                transform: rotate(-3deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .button {
+            font-family: "Apple SD Gothic Neo", sans-serif;
+            align-items: center;
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            scale: 2.5;
+            background-color: goldenrod;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: x-large;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            transition: ease-out 1.2s;
+            animation: wiggle 2s ease-out 2s;
+        }
+
+        .button:hover {
+            transform:rotateX('20');
+            animation: wiggle 1s ease-in infinite;
+            background-color: papayawhip;
+            color: chocolate;
+            transition: ease-in 1.2s;
+        }
+
+        .button2:hover {
+            background-color: papayawhip;
+            color: chocolate;
+        }
+
+        form {
+            padding-top: 90px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-right: 100px;
+        }
+
+        label {
+            color: black;
+            font-size: 20px;
+            font-family: "Apple SD Gothic Neo", sans-serif;
+            font-weight: 20;
+            margin-right: 10px;
+            width: 20%;
+            text-align: right;
+        }
+
+        .employerDetails {
+            background-color: lightgoldenrodyellow;
+            flex-grow: 1;
+            padding: 8px;
+            border: 3px dashed black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .employerDetails[type="text"],
+        .employerDetails[type="email"] {
+            height: 40px;
+        }
+
+        .employerDetails[name="jobDescription"] {
+            height: 100px;
+        }
+
+        #employerDetailsSubmit {
+            background-color: rgb(33, 98, 183);
+            font-size: 20px;
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            color: rgb(255, 251, 232);
+        }
+
+        #employerDetailsSubmit:hover {
+            background-color: rgb(175, 221, 250);
+            color: rgb(33, 98, 183);
+            cursor: pointer;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .text-overlay {
+            z-index: 2;
+            position: absolute;
+            display: inline;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            -webkit-text-stroke: 0.5px gray;
+            font-size: 50px;
+            font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+            font-weight: bolder;
+            animation: fadeIn 3s;
+        }
+
+        .textoverlayContainer {
+            color: black;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .text-overlay span {
+            -webkit-text-stroke: 2px black;
+            color: goldenrod;
+            animation: fadeIn 3s;
+        }
+
+        .image-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        #funnyimg1,
+        #funnyimg2 {
+            height: 500px;
+            width: auto;
+            display: block;
+        }
+
+        .button2 {
+            font-family: "Apple SD Gothic Neo", sans-serif;
+            align-items: center;
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: goldenrod;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: x-large;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #funnyimg1 {
+            margin-left: 0px;
+        }
+
+        #funnyimg2 {
+            margin-right: -15%;
+        }
+
+        .button3 {
+            background-color: inherit;
+            font-size: 25px;
+            border: none;
+            transition: ease-out 0.3s;
+        }
+
+        .button3:hover {
+            border-radius: 10px;
+            transform: scale(1.1);
+            transition: ease-in 0.3s;
+            opacity: 1;
+        }
+
+        .button3:hover {
+            color: rgb(42,101,132);
+        }
+
+        .button3::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(42,101,132);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button3:hover::before {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="companyTextContainer">
+            <img id="companyText" src="{{ url_for('static', filename='images/hiremetext2.png') }}" alt="HireMe text">
+        </div>
+        <a href="homepage.html"><img id="companyLogo" src="{{ url_for('static', filename='images/hiremelogo.png') }}" alt="logo"></a>
+        <nav class="navLinks" id="homeAndabout">
+            <a class="underline" id="homeLink" href="{{url_for('index')}}"><button class="button3">Home</button></a>
+            <a class="underline" id="aboutLink" href="{{url_for('abt')}}"><button class="button3">About</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/corporatelgbtq.jpeg') }}" alt="diverse people">
+        </div>
+        <div class="textoverlayContainer"></div>
+
+        <h1>Who are you?</h1>
+    
+        <div class="image-button-container">
+            <a href="{{url_for('Employer')}}" class="button">An Employer</a>
+            <img class="styleImages" id="funnyimg1" src="{{ url_for('static', filename='images/funnyomg1.png') }}">
+        </div>
+    
+        <div class="image-button-container">
+            <img class="styleImages" id="funnyimg2" src="{{ url_for('static', filename='images/funnyomg2.png') }}">
+            <a href="{{url_for('Job_Seeker')}}" class="button">A Jobseeker</a>
+        </div>
+    
+        <hr>
+    </main>
+</body>
+
+</html>
+
+    
+    

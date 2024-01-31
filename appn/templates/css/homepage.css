@@ -1,0 +1,168 @@
+
+body {
+    background-color: black;
+    margin: 0 0 0 0;
+}
+
+
+
+header {
+    background-color: palegoldenrod;
+    height: 80px;
+    padding: 10px 0 5px 25px;
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+header h1 {
+    font-size: 50px;
+    font-family:cursive;
+    color: white;
+    margin: 0; /* Remove margin to align properly */
+    flex-grow: 1; /* Allows the title to grow and push navs to edges */
+}
+
+header h1 span {
+    color: palevioletred;
+    font-family: fantasy;
+}
+
+
+.navLinks{
+    margin-right: 10px;
+}
+
+#homeAndabout{
+    font-family: Tahoma;
+
+}
+
+
+#homeLink, #aboutLink {
+    margin-right: 10px;
+}
+
+#homeLink, #aboutLink{
+    height: 20px;
+
+    width: auto;
+    text-decoration: none;
+    color: white;
+}
+
+#homeLink:visited, #aboutLink:visited{
+    color: white; /* or any other color for visited links */
+}
+
+#aboutLink:hover, #homeLink:hover{
+    color: deeppink;
+}
+
+
+main{
+    /* background-color: burlywood; */
+    align-items: center; /*Center items horizontally in the container*/ 
+    justify-content: center;  /*Center items vertically in the container */
+    /* height: 500px;
+    margin: 10px 10px 10px 10px;
+    padding: 15px 0 5px 25px;
+    border-radius: 10px; */
+    text-align: center;
+
+    
+}
+
+main img{
+    width: 450px;
+    height: 200px;
+}
+
+
+main h1{
+    font-family:fantasy;
+    margin-top: 50px;
+    font-size: 50px;
+    color: paleturquoise;
+}
+
+main h3{
+    color:pink;
+    margin-top: -20px;
+}
+
+.button {
+    align-items: center;
+    display: block; /* Changes display to block */
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px 20px; /* Adds space inside the button */
+    background-color: goldenrod; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from link */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Larger font size */
+    border: none; /* Removes border */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+}
+
+
+.button:hover {
+    background-color: papayawhip;
+    color: chocolate;
+}
+
+
+form{
+    padding-top: 90px;
+}
+
+
+.form-row {
+    display: flex;
+    align-items: center; /* Aligns the label and input vertically */
+    margin-bottom: 30px; /* Adds space between rows */
+    margin-right: 100px;
+}
+
+label {
+    font-size: 20px;
+    font-family: fantasy;
+    margin-right: 10px; /* Adds space between the label and the input */
+    width: 20%; /* Adjust the width as needed */
+    text-align: right; /* Aligns the text to the right */
+}
+
+.employerDetails {
+    background-color: blanchedalmond;
+    flex-grow: 1; /* Allows the input to take up the remaining space */
+    padding: 8px;
+    border: 3px dashed purple;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.employerDetails[type="text"],
+.employerDetails[type="email"] {
+    height: 40px;
+}
+
+.employerDetails[name="jobDescription"] {
+    height: 100px;
+}
+
+#employerDetailsSubmit{
+    background-color: cadetblue;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    color:darkmagenta;
+}
+
+#employerDetailsSubmit:hover{
+    background-color:darkmagenta ;
+    color:cadetblue ;
+}
+

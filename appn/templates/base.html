@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <style>
+        body {
+            background-color: rgb(255, 251, 232);
+            margin: 0;
+        }
+
+        header {
+            background-color: rgb(255, 251, 232);
+            border-bottom: double gray;
+            height: 80px;
+            padding: 10px 0 5px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 50px;
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            color: rgb(62, 95, 240);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        header h1 span {
+            color: rgb(62, 95, 240);
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+        }
+
+        .navLinks {
+            margin-right: 10px;
+        }
+
+        #homeAndabout {
+            font-family: Tahoma;
+        }
+
+        #homeLink, #aboutLink {
+            margin-right: 10px;
+            height: 20px;
+            width: auto;
+            text-decoration: none;
+            color: plum;
+        }
+
+        #homeLink:visited, #aboutLink:visited {
+            color: plum;
+        }
+
+        #aboutLink:hover, #homeLink:hover {
+            color: deeppink;
+        }
+
+        main {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        main img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        main h1 {
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            margin-top: 50px;
+            font-size: 50px;
+            color: lightseagreen;
+        }
+
+        main h3 {
+            color: pink;
+            margin-top: -20px;
+        }
+
+        .button {
+            align-items: center;
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: goldenrod;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: x-large;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .button:hover {
+            background-color: papayawhip;
+            color: chocolate;
+        }
+
+        form {
+            padding-top: 90px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            margin-right: 100px;
+        }
+
+        label {
+            color: black;
+            font-size: 20px;
+            font-family: 'Apple SD Gothic Neo', sans-serif;
+            font-weight: 20;
+            margin-right: 10px;
+            width: 20%;
+            text-align: right;
+        }
+
+        .employerDetails {
+            background-color: blanchedalmond;
+            flex-grow: 1;
+            padding: 8px;
+            border: 3px dashed black;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .employerDetails[type="text"],
+        .employerDetails[type="email"] {
+            height: 40px;
+        }
+
+        .employerDetails[name="jobDescription"] {
+            height: 100px;
+        }
+
+        #employerDetailsSubmit {
+            background-color: cadetblue;
+            font-size: 20px;
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            color: darkmagenta;
+        }
+
+        #employerDetailsSubmit:hover {
+            background-color: darkmagenta;
+            color: cadetblue;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: silver;
+            font-size: 70px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><span>HIRE</span> ME</h1>
+        <nav class="navLinks" id="homeAndabout">
+            <a id="homeLink" href="home.html">Home</a>
+            <a id="aboutLink" href="https://www.google.com">About</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>

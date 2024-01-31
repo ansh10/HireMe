@@ -1,0 +1,51 @@
+{% extends 'basepage.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+<body style="color: burlywood;">
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Job Listings</h2>
+    
+    <div class="row justify-content-center"> <!-- Center the content -->
+        <div class="col-md-20"> <!-- Adjust the width as needed -->
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width: 5%;">ID</th>
+                        <th style="width: 15%;">Name</th>
+                        <th style="width: 15%;">Company</th>
+                        <th style="width: 15%;">Email</th>
+                        <th style="width: 10%;">Role</th>
+                        <th style="width: 20%;">Required Skills</th>
+                        <th style="width: 10%;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <td>{{ post.id }}</td>
+                        <td>{{ post.name }}</td>
+                        <td>{{ post.company_name }}</td>
+                        <td>{{ post.email_address }}</td>
+                        <td>{{ post.role }}</td>
+                        <td>{{ post.skills_req }}</td>
+                        <td>
+                            <form method="POST" action="{{ url_for('apply') }}">
+                                {{ form.csrf_token }}
+                                {{ form.hidden_tag() }}
+                                <input type="hidden" name="post_id" value="{{ post.id }}">
+                                <button type="submit">Apply</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

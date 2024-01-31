@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+          background-color: rgb(255, 251, 232);
+          margin: 0 0 0 0;
+        }
+
+        header {
+          background-color: rgb(255, 251, 232);
+          position: relative;
+          border-bottom: double gray;
+          height: 80px;
+          padding: 10px 0 5px 0px;
+          display: flex; /* Use flexbox layout */
+          align-items: center; /* Align items vertically */
+          justify-content: space-between; /* Distribute space between items */
+        }
+        #companyTextContainer {
+  position: absolute;
+  margin-left: 215px;
+  top: 0;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+#companyText {
+  margin-top: 20px;
+  height: 60px;
+}
+
+.navLinks {
+  margin-right: 10px;
+  /* other styles */
+}
+
+#companyLogo {
+  margin-left: -10px;
+  height: 120px;
+  width: auto;
+}
+
+.navLinks {
+  margin: auto;
+  text-align: center;
+}
+
+#homeAndabout {
+  font-family: Tahoma;
+}
+
+#homeLink,
+#aboutLink {
+  margin-right: 40px;
+  font-size: 25px;
+}
+
+#homeLink {
+  height: 20px;
+  font-family: "Lato", sans-serif;
+  width: auto;
+  text-decoration: none;
+  color: rgb(33, 98, 183);
+}
+
+#aboutLink {
+  font-family: "Lato", sans-serif;
+  color: black;
+  text-decoration: none;
+  width: auto;
+  height: 20px;
+}
+
+
+
+main {
+  align-items: center; /*Center items horizontally in the container*/
+  justify-content: center; /*Center items vertically in the container */
+
+  text-align: center;
+}
+
+main img {
+  opacity: 0.4;
+  width: 100%; /* Sets the width to 100% of the container */
+  height: auto; /* Keeps the height proportional to the width */
+  display: block; /* Ensures the image is a block element to fit the width properly */
+  margin: auto; /* Centers the image if its width is less than the container */
+}
+
+main h1 {
+  font-family: "Lato", sans-serif;
+  margin-top: 50px;
+  font-size: 50px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+main h2 {
+  font-family: "Lato", sans-serif;
+}
+
+main h3 {
+  color: pink;
+  margin-top: -20px;
+}
+
+
+@keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+.button {
+  font-family: "Apple SD Gothic Neo", sans-serif;
+  align-items: center;
+  display: block; /* Changes display to block */
+  
+  width: 200px;
+  height: 50px;
+  margin: 10px auto;
+  padding: 10px 20px; /* Adds space inside the button */
+  scale: 2.5;
+  background-color: goldenrod; /* Button background color */
+  color: white; /* Text color */
+  text-decoration: none; /* Removes underline from link */
+  border-radius: 10px; /* Rounded corners */
+  font-size: x-large; /* Larger font size */
+  border: none; /* Removes border */
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+  text-align: center; /* Centers text horizontally */
+  line-height: 50px; /* Aligns text vertically */
+  transition: ease-out 1.2s;
+  animation: wiggle 2s ease-out 2s;
+
+}
+
+
+.button:hover{
+    transform:rotateX('20');
+    animation: wiggle 1s ease-in infinite;
+    background-color: papayawhip;
+    color: chocolate;
+    transition: ease-in 1.2s;
+
+}
+
+
+.button2:hover {
+  background-color: papayawhip;
+  color: chocolate;
+}
+
+form {
+  padding-top: 90px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center; /* Aligns the label and input vertically */
+  margin-bottom: 30px; /* Adds space between rows */
+  margin-right: 100px;
+}
+
+label {
+  color: black;
+  font-size: 20px;
+  font-family: "Apple SD Gothic Neo", sans-serif;
+  font-weight: 20;
+  margin-right: 10px; /* Adds space between the label and the input */
+  width: 20%; /* Adjust the width as needed */
+  text-align: right; /* Aligns the text to the right */
+}
+
+.employerDetails {
+  background-color: lightgoldenrodyellow;
+  flex-grow: 1; /* Allows the input to take up the remaining space */
+  padding: 8px;
+  border: 3px dashed black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.employerDetails[type="text"],
+.employerDetails[type="email"] {
+  height: 40px;
+}
+
+.employerDetails[name="jobDescription"] {
+  height: 100px;
+}
+
+#employerDetailsSubmit {
+  background-color: rgb(33, 98, 183);
+  font-size: 20px;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  color: rgb(255, 251, 232);
+}
+
+#employerDetailsSubmit:hover {
+  background-color: rgb(175, 221, 250);
+  color: rgb(33, 98, 183);
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.text-overlay {
+  z-index: 2;
+  position: absolute;
+  display: inline;
+  top: 50%; /* Position the text in the middle of the image vertically */
+  left: 50%; /* Position the text in the middle of the image horizontally */
+  transform: translate(-50%, -50%); /* Ensures the text is centered */
+  color: black; /* Text color */
+  -webkit-text-stroke: 0.5px gray;
+  font-size: 50px; /* Adjust as needed */
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bolder;
+  animation: fadeIn 3s;
+  /* Add more styling as needed */
+}
+
+.textoverlayContainer {
+  color: black;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-overlay span {
+  -webkit-text-stroke: 2px black;
+  color: goldenrod;
+  animation: fadeIn 3s;
+}
+
+.image-button-container {
+  display: flex; /* Enables Flexbox */
+  align-items: center; /* Vertically centers the items in the container */
+  justify-content: center; /* Horizontally centers the items in the container */
+  margin: 20px 0; /* Adds some margin around the container for spacing */
+}
+
+#funnyimg1,
+#funnyimg2 {
+  /* Keep existing styles and remove the margin-left and margin-right properties */
+  height: 500px;
+  width: auto;
+  display: block;
+}
+
+.button2 {
+  font-family: "Apple SD Gothic Neo", sans-serif;
+  align-items: center;
+  display: block; /* Changes display to block */
+  width: 200px;
+  height: 50px;
+  margin: 10px auto;
+  padding: 10px 20px; /* Adds space inside the button */
+  background-color: goldenrod; /* Button background color */
+  color: white; /* Text color */
+  text-decoration: none; /* Removes underline from link */
+  border-radius: 10px; /* Rounded corners */
+  font-size: x-large; /* Larger font size */
+  border: none; /* Removes border */
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+  text-align: center; /* Centers text horizontally */
+  line-height: 50px; /* Aligns text vertically */
+}
+
+#funnyimg1 {
+  margin-left: 0px; /* Adjust this value as needed */
+}
+
+#funnyimg2 {
+  margin-right: -15%;
+}
+
+.button3{
+    background-color: inherit;
+    font-size: 25px;
+    border: none;
+    transition: ease-out 0.3s;
+}
+
+.button3:hover{
+    border-radius: 10px;
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+    opacity: 1;
+}
+
+.button3:hover {
+    color: rgb(42,101,132)
+    ;
+  }
+  
+  .button3::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(42,101,132);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+ .button3:hover::before {
+    transform: scaleX(1);
+  }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="{{url_for('index')}}"><img id="companyLogo" src="images/hiremelogo.png" alt="logo"></a>
+        <nav class="navLinks" id="homeAndabout"><a id="homeLink" href="{{url_for('index')}}">Home</a> <a id="aboutLink" href="{{url_for('abt')}}">About</a></nav>
+    </header>
+    <main>
+        <!-- Content goes here -->
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

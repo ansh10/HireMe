@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    
+    <style>
+
+body {
+    background-color:rgb(255, 251, 232);
+    margin: 0 0 0 0;
+}
+
+
+
+header {
+    background-color: rgb(255, 251, 232);
+    border-bottom: double gray;
+    height: 80px;
+    padding: 10px 0 5px 25px;
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute space between items */
+}
+
+header img{
+    height: 120px;
+    width: auto;
+}
+
+.navLinks{
+    margin-right: 10px;
+}
+
+#homeAndabout{
+    font-family: Tahoma;
+
+}
+
+
+#homeLink, #aboutLink {
+    margin-right: 10px;
+}
+
+#homeLink, #aboutLink{
+    height: 20px;
+
+    width: auto;
+    text-decoration: none;
+    color:plum;
+}
+
+#homeLink:visited, #aboutLink:visited{
+    color: plum; /* or any other color for visited links */
+}
+
+#aboutLink:hover, #homeLink:hover{
+    color: deeppink;
+}
+
+
+main{
+    /* background-color: burlywood; */
+    align-items: center; /*Center items horizontally in the container*/ 
+    justify-content: center;  /*Center items vertically in the container */
+    /* height: 500px;
+    margin: 10px 10px 10px 10px;
+    padding: 15px 0 5px 25px;
+    border-radius: 10px; */
+    text-align: center;
+
+    
+}
+
+main img {
+    width: 100%; /* Sets the width to 100% of the container */
+    height: auto; /* Keeps the height proportional to the width */
+    display: block; /* Ensures the image is a block element to fit the width properly */
+    margin: auto; /* Centers the image if its width is less than the container */
+}
+
+
+
+main h1{
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    margin-top: 50px;
+    font-size: 50px;
+    color: lightseagreen;
+}
+
+main h3{
+    color:pink;
+    margin-top: -20px;
+}
+
+.button {
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    align-items: center;
+    display: block; /* Changes display to block */
+    width: 200px;
+    height: 50px;
+    margin: 10px auto;
+    padding: 10px 20px; /* Adds space inside the button */
+    background-color: goldenrod; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from link */
+    border-radius: 10px; /* Rounded corners */
+    font-size: x-large; /* Larger font size */
+    border: none; /* Removes border */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+    text-align: center; /* Centers text horizontally */
+    line-height: 50px; /* Aligns text vertically */
+}
+
+
+
+.button:hover, .button2:hover {
+    background-color: papayawhip;
+    color: chocolate;
+}
+
+
+form{
+    padding-top: 90px;
+}
+
+
+.form-row {
+    display: flex;
+    align-items: center; /* Aligns the label and input vertically */
+    margin-bottom: 30px; /* Adds space between rows */
+    margin-right: 100px;
+}
+
+label {
+    color: black;
+    font-size: 20px;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    font-weight: 20;
+    margin-right: 10px; /* Adds space between the label and the input */
+    width: 20%; /* Adjust the width as needed */
+    text-align: right; /* Aligns the text to the right */
+}
+
+.employerDetails {
+    background-color: blanchedalmond;
+    flex-grow: 1; /* Allows the input to take up the remaining space */
+    padding: 8px;
+    border: 3px dashed black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.employerDetails[type="text"],
+.employerDetails[type="email"] {
+    height: 40px;
+}
+
+.employerDetails[name="jobDescription"] {
+    height: 100px;
+}
+
+#employerDetailsSubmit{
+    background-color: cadetblue;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    color:darkmagenta;
+}
+
+#employerDetailsSubmit:hover{
+    background-color:darkmagenta ;
+    color:cadetblue ;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Position the text in the middle of the image vertically */
+    left: 50%; /* Position the text in the middle of the image horizontally */
+    transform: translate(-50%, -50%); /* Ensures the text is centered */
+    color:silver; /* Text color */
+    font-size: 70px; /* Adjust as needed */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* Add more styling as needed */
+}
+
+
+.button2 {
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    align-items: center;
+    display: block; /* Changes display to block */
+    width: 200px;
+    height: 50px;
+    margin: 10px auto;
+    padding: 10px 20px; /* Adds space inside the button */
+    background-color: goldenrod; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from link */
+    border-radius: 10px; /* Rounded corners */
+    font-size: x-large; /* Larger font size */
+    border: none; /* Removes border */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+    text-align: center; /* Centers text horizontally */
+    line-height: 50px; /* Aligns text vertically */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/hiremelogo.png" alt="logo">
+        <nav class="navLinks" id="homeAndabout">
+            <a id="homeLink" href="home.html">Home</a> 
+            <a id="aboutLink" href="https://www.google.com">About</a>
+        </nav>
+    </header>
+    <main>
+        <h1>The Job Vacancy was Posted!!!</h1>
+        <div>        
+            <a class="button2" href="{{url_for('Employer')}}">New Post</a>
+            <a class="button2" href="{{url_for('index')}}">Home</a>
+        </div>
+    </main>
+</body>
+</html>

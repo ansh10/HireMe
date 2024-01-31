@@ -1,0 +1,37 @@
+{% extends 'basepage.html'%}
+{% block title %}
+    Employer Page
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method='POST'class="form-employer"style="color:white">
+        {{ form.csrf_token }}
+        <h1 class="h3 mb-3 font-weight-normal">
+            Post a Job
+        </h1>
+        <br>
+        <dr>
+        {{form.name.label()}}
+        {{form.name(class="form-control",placeholder="Your Name")}}
+
+        {{form.company_name.label()}}
+        {{form.company_name(class="form-control",placeholder="Your Name")}}
+        
+        {{form.email.label()}}
+        {{form.email(class="form-control",placeholder="Email")}}
+    
+        {{form.role.label()}}
+        {{form.role(class="form-control",placeholder="Job Role")}}
+
+        {{form.skills1.label()}}
+        {{form.skills1(class="form-control",placeholder="Required skills")}}
+        </dr>
+        <br>
+        <dr>
+    
+        {{form.post(class="btn btn-lg btn-block btn-primary")}}
+        </dr>
+    </form>
+    </div>        
+{% endblock %}
