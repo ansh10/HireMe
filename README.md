@@ -24,14 +24,6 @@ Job seekers can apply for posted positions directly through the platform, simpli
 
 To get started with HireMe, refer to the [Getting Started](#getting-started) section in the README file. It provides step-by-step instructions on setting up the project locally for development or testing purposes.
 
-## Usage
-
-Explore the [Usage](#usage) section to understand how to utilize the features of HireMe, whether you are an employer looking to post jobs or a job seeker searching for opportunities.
-
-## Contributing
-
-We welcome contributions from the community! If you'd like to contribute to HireMe, please refer to the [Contribution Guidelines](CONTRIBUTING.md) for details on how to get involved.
-
 Install Dependencies:
 
 Update the config.py file with your database and mail server details.
@@ -52,6 +44,14 @@ Application:
 Job seekers can apply for a specific job by clicking the "Apply" button on the dashboard.
 Contributing
 Contributions are welcome! If you'd like to contribute to HireMe, please follow our contribution guidelines.
+
+## Usage
+
+Explore the [Usage](#usage) section to understand how to utilize the features of HireMe, whether you are an employer looking to post jobs or a job seeker searching for opportunities.
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to HireMe, please refer to the [Contribution Guidelines](CONTRIBUTING.md) for details on how to get involved.
 
 ---
 
