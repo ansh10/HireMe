@@ -1,7 +1,5 @@
 # HireMe
 
-# HireMe
-
 HireMe is a web application dedicated to promoting diversity and inclusivity in the job market. The project aims to connect employers with talented individuals from minority groups, providing a platform that facilitates seamless job postings, applications, and collaborations.
 
 ## Introduction
